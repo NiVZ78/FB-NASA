@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~4.2.0"
+  },
+  "fitbit": {
+    "appUUID": "acf70f88-c624-4cdd-8106-c842ed055d35",
+    "appType": "clockface",
+    "appDisplayName": "NASA",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "run_background",
+      "access_internet"
+    ],
+    "buildTargets": [
+      "mira",
+      "gemini",
+      "meson"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "NASA"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}
