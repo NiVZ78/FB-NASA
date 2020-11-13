@@ -1,5 +1,5 @@
 import { outbox } from "file-transfer";
-import { Image } from "image";
+import {image} from "image";
 import * as messaging from "messaging";
 import { device } from "peer";
 import { settingsStorage } from "settings";
@@ -43,16 +43,15 @@ function getImage() {
       image.bitmap,
       {
         rle: 'auto',
-        outputFormat: TXIOutputFormat.RGB565,
+        outputFormat: 'RGB565'
       },
     );
   }
-
   
   const myURL = "https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/potw1930a.jpg"
   const myResize = {width:150, height:112}
   
-  requestImage(myUrl, myResize)
+  requestImage(myURL, myResize)
   .then(txi => {outbox.enqueue(`${Date.now()}.jpg`, txi)})
   
  /* 
